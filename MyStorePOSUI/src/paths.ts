@@ -64,9 +64,9 @@ export const PATHS = {
 
   // **** INVENTORIES ****
   INVENTORIESLIST: `${INVENTORY}/inventories-list`,
-  ADD_INVENTORY: `${INVENTORY}/outlet-list/add`,
-  EDIT_INVENTORY: `${INVENTORY}/outlet-list/edit`,
-  DELETE_INVENTORY: `${INVENTORY}/outlet-list/delete`,
+  ADD_INVENTORY: `${INVENTORY}/inventories-list/add`,
+  EDIT_INVENTORY: `${INVENTORY}/inventories-list/edit`,
+  DELETE_INVENTORY: `${INVENTORY}/inventories-list/delete`,
 
   // **** BILLING ****
   INVOICESLIST: `${BILLING}/invoices-list`,

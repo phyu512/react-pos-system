@@ -123,6 +123,36 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             </Link>
           </div>
 
+          {/* CONFIGURATION SECTION */}
+          {(userRole === ROLES.ADMINISTRATOR || isSalesStaff) && (
+            <div>
+              <button onClick={() => toggleGroup('config')} className={groupHeaderClass}>
+                <span>Configuration</span>
+                <ChevronDown size={12} className={`transition-transform ${openGroups.config ? '' : '-rotate-90'}`} />
+              </button>
+              
+              <div className={`space-y-1 overflow-hidden transition-all duration-300 ${openGroups.config ? 'max-h-[500px]' : 'max-h-0'}`}>
+                {/* ADMIN ONLY ITEMS: Users, Outlets, Roles, Menu */}
+                {userRole === ROLES.ADMINISTRATOR && (
+                  <>
+                    <Link to={PATHS.UserList} className={navItemClass(PATHS.UserList)}> <Users size={18} /> <span>Users</span> </Link>
+                    <Link to={PATHS.OUTLETSList} className={navItemClass(PATHS.OUTLETSList)}> <Store size={18} /> <span>Outlets</span> </Link>
+                    <Link to={PATHS.ROLEList} className={navItemClass(PATHS.ROLEList)}> <ShieldCheck size={18} /> <span>Roles</span> </Link>
+                    <Link to={PATHS.MENUList} className={navItemClass(PATHS.MENUList)}> <MenuIcon size={18} /> <span>Menu</span> </Link>
+                  </>
+                )}
+                                
+                {/* CUSTOMERS: Logic checks permissions via canView (which includes Admin bypass) */}
+                {canView('customers.view') && (
+                  <Link to={PATHS.CUSTOMERSList} className={navItemClass(PATHS.CUSTOMERSList)}>
+                    <UserSquare size={18} /> <span>Customers</span>
+                  </Link>
+                )}
+                
+              </div>
+            </div>
+          )}
+
           {/* INVENTORY SECTION */}
           {(userRole === ROLES.ADMINISTRATOR || userRole === ROLES.INVENTORY_MANAGER) && (
             <div>
@@ -177,35 +207,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             </div>
           )}
 
-          {/* CONFIGURATION SECTION */}
-          {(userRole === ROLES.ADMINISTRATOR || isSalesStaff) && (
-            <div>
-              <button onClick={() => toggleGroup('config')} className={groupHeaderClass}>
-                <span>Configuration</span>
-                <ChevronDown size={12} className={`transition-transform ${openGroups.config ? '' : '-rotate-90'}`} />
-              </button>
-              
-              <div className={`space-y-1 overflow-hidden transition-all duration-300 ${openGroups.config ? 'max-h-[500px]' : 'max-h-0'}`}>
-                
-                {/* CUSTOMERS: Logic checks permissions via canView (which includes Admin bypass) */}
-                {canView('customers.view') && (
-                  <Link to={PATHS.CUSTOMERSList} className={navItemClass(PATHS.CUSTOMERSList)}>
-                    <UserSquare size={18} /> <span>Customers</span>
-                  </Link>
-                )}
-
-                {/* ADMIN ONLY ITEMS: Users, Outlets, Roles, Menu */}
-                {userRole === ROLES.ADMINISTRATOR && (
-                  <>
-                    <Link to={PATHS.UserList} className={navItemClass(PATHS.UserList)}> <Users size={18} /> <span>Users</span> </Link>
-                    <Link to={PATHS.OUTLETSList} className={navItemClass(PATHS.OUTLETSList)}> <Store size={18} /> <span>Outlets</span> </Link>
-                    <Link to={PATHS.ROLEList} className={navItemClass(PATHS.ROLEList)}> <ShieldCheck size={18} /> <span>Roles</span> </Link>
-                    <Link to={PATHS.MENUList} className={navItemClass(PATHS.MENUList)}> <MenuIcon size={18} /> <span>Menu</span> </Link>
-                  </>
-                )}
-              </div>
-            </div>
-          )}
+          
 
         </div>
 

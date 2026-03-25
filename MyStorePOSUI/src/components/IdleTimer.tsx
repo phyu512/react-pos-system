@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PATHS } from '../paths';
 
-const IDLE_TIME = 5 * 60 * 1000; // 15 Minutes
+const IDLE_TIME = 10 * 60 * 1000; // 10 Minutes
 
 const IdleTimer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const navigate = useNavigate();

@@ -347,7 +347,7 @@ const AddEditUser: React.FC = () => {
             className="px-8 py-2 text-sm font-bold text-white bg-slate-900 rounded-lg hover:bg-blue-700 transition-all flex items-center disabled:bg-slate-300 shadow-md active:scale-95"
           >
             {submitting ? <Loader2 className="animate-spin mr-2" size={16} /> : <Save className="mr-2" size={16} />}
-            {isEditMode ? 'Update Account' : 'Create Account'}
+            {isEditMode ? 'Update User' : 'Create User'}
           </button>
         </div>
       </form>

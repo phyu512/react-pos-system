@@ -97,7 +97,7 @@ namespace MyStorePOSAPI.Configuration
             }
 
             // 6. CREATE THE INITIAL ADMIN USER
-            string adminEmail = "admin@starlinkk.com";
+            string adminEmail = "admin@starlink.com";
             var adminUser = await userManager.FindByEmailAsync(adminEmail);
 
             if (adminUser == null)
