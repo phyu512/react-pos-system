@@ -23,9 +23,10 @@ Frontend: React 19, TypeScript, Tailwind CSS, Lucide Icons, React Router.
 DevOps: Git Monorepo structure with automated .gitignore for clean deployments.
 
 ##Getting Started & Testing
-| Role            | Email                       | Password            | Access Level                                           | 
-|IT Administrator | admin@starlink.com          | Password@123        | Full Access											                       |
-|Sale Supervisor  | salesupervisor@starlink.com | Password@123        | Dashboard, Customer, Sale Order, Invoices, Receivables |
+| Role | Email | Password | Access Level |
+| :--- | :--- | :--- | :--- |
+| **IT Administrator** | admin@starlink.com | Password@123 | Full Access |
+| **Sale Supervisor** | salesupervisor@starlink.com | Password@123 | Dashboard, Customers, Sales, Invoices |
 
 ##Installation & Setup
 Backend: Navigate to `MyStorePOSAPI`, run `dotnet restore`, then `dotnet run`.
