@@ -1,4 +1,4 @@
-##Star Link Trading - Full-Stack POS System
+##StarLink Trading - Full-Stack POS System
 
 A modern Point of Sale solution featuring using a .NET CORE for backend and a REACT TYPESCRIPT for frontend.
 
