@@ -24,7 +24,7 @@ DevOps: Git Monorepo structure with automated .gitignore for clean deployments.
 
 ##Getting Started & Testing
 | Role            | Email                       | Password            | Access Level                                           | 
-|IT Administrator | admin@starlink.com          | Password@123        | Full Access											   |
+|IT Administrator | admin@starlink.com          | Password@123        | Full Access											                       |
 |Sale Supervisor  | salesupervisor@starlink.com | Password@123        | Dashboard, Customer, Sale Order, Invoices, Receivables |
 
 ##Installation & Setup
