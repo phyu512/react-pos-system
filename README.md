@@ -9,8 +9,9 @@ This system implements a professional Identity and Access Management layer using
     * **Sale Supervisor:** Restricted to Sales menus, Customers, and POS transactions.
     * **Inventory Manager:** Access to Categories, Products, Stock and Warehouse data.
 * **Zero-Trust Onboarding:** New self-registered users are restricted to the Dashboard only until an Administrator assigns a functional role.
-* **Session Guard:** an Auto-Logout features that triggers after 10 minutes of inactivity to protect unattended terminals.
-* **Account Recovery:** Supports self-service "Forgot Password" flows and Administrator will reset password to a system default Password@123.
+* **Auto-Logout:** Sessions expire after 10 minutes of inactivity to protect unattended terminals in a retail environment.
+* **URL Protection:** Unauthorized users attempting to access restricted links will find the links expired or inaccessible.
+* **Account Recovery:** Supports self-service "Forgot Password" flows (OR) Administrator will reset password to a system default Password@123.
 
 ##Technical Architecture & Integrity
 * **Relational Integrity:** Strict Foreign Key Constraints prevent data anomalies (e.g., an Outlet cannot be deleted if active Users are assigned to it). An Administrator cannot delete their own account. 
