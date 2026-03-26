@@ -1,6 +1,6 @@
 ##StarLink Trading - Full-Stack POS System
 
-A modern Point of Sale solution featuring using a .NET CORE for backend and a REACT TYPESCRIPT for frontend.
+A modern Point of Sale solution featuring using a .NET CORE for backend and a REACT TYPESCRIPT for frontend. This is a Functional Demo.
 
 ##Security & Identity
 This system implements a professional Identity and Access Management layer using ASP.NET Core Identity.
